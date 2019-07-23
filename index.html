@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>리그 오브 레전드 티어</title>
+        <script>
+            var comment = {};
+            comment["아이언"] = "게임을 즐길 줄 아네요.";
+            comment["브론즈"] = "좋아요.";
+            comment["실버"] = "참 잘했어요!";
+            comment["골드"] = "상당한 실력이에요.";
+            comment["플래티넘"] = "오우!";
+            comment["다이아몬드"] = "다야.";
+            comment["마스터"] = "게임을 마스터하다.";
+            comment["그랜드 마스터"] = "신 티어.";
+            comment["챌린저"] = "안녕하세요.";
+            
+            window.onload = function () {
+                var btn = document.getElementById("action");
+                btn.onclick = showComment;
+            }
+            
+            function showComment() {
+                var select = document.getElementById("tier");
+                var text = document.getElementById("text");
+                text.innerHTML = comment[select.value];
+            }
+        </script>
+    </head>
+    
+    <body>
+        <select id="tier">
+            <option>아이언</option>
+            <option>브론즈</option>
+            <option>실버</option>
+            <option>골드</option>
+            <option>플래티넘</option>
+            <option>다이아몬드</option>
+            <option>마스터</option>
+            <option>그랜드 마스터</option>
+            <option>챌린저</option>
+        </select>
+        <br>
+        <input type="button" value="확인" id="action">
+        <hr>
+        <output id="text">당신의 티어를 선택해주세요.</output>
+    </body>
+</html>
